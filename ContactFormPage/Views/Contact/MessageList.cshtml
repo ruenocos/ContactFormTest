@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewData["Title"] = "MessageList";
+}
+
+
+<table id="messagetable" class="display">
+    <thead>
+        <tr>
+            <th>Message ID</th>
+            <th>Voor naam</th>
+            <th>Achternaam</th>
+            <th>Email</th>
+            <th>Telefoonnummer</th>
+            <th>Onderwerp</th>
+            <th>Bericht</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var message in ViewBag.Messages)
+        {
+            <tr>
+                <td>
+                    @message.SavedMessageId
+                </td>
+                <td>
+                    @message.FirstName
+                </td>
+                <td>
+                    @message.LastName
+                </td>
+                <td>
+                    @message.Email
+                </td>
+                <td>
+                    @message.Phone
+                </td>
+                <td>
+                    @message.Subject
+                </td>
+                <td>
+                    @message.Body
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

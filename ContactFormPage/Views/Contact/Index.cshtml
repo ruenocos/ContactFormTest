@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewData["Title"] = "Contact";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="post" action="/contact/submit">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputFirstName">Voornaam</label>
+            <input name="firstname" type="text" class="form-control" id="inputFirstName" placeholder="John" required>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputLastName">Achternaam</label>
+            <input name="lastname" type="text" class="form-control" id="inputLastName" placeholder="West" required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="inputEmail">E-mail</label>
+        <input name="email" type="email" class="form-control" id="inputEmail" placeholder="example@domain.com" required>
+    </div>
+
+    <div class="form-group">
+        <label for="inputPhone">Telefoonnummer</label>
+        <input name="phone" type="tel" class="form-control" id="inputPhone" placeholder="+12-34-567-890" required>
+    </div>
+
+    <div class="pt-4">
+        <div class="form-group">
+            <label for="inputSubject">Onderwerp</label>
+            <input name="subject" type="text" class="form-control" id="inputSubject" placeholder="Skyrim intro takes too long">
+        </div>
+
+        <div class="form-group">
+            <label for="inputMessage">Bericht</label>
+            <textarea name="message" class="form-control" id="inputMessage" rows="3" placeholder="I can bake 3 eggs, walk my dog 5 times and paint my kitchen walls before the intro finishes"></textarea>
+        </div>
+
+
+    </div>
+
+    <button class="btn btn-primary" type="submit">
+        Verzend
+    </button>
+</form>
+
